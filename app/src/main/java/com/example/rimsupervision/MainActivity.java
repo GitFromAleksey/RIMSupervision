@@ -77,7 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if(emerBtn == v)
         {
-            Toast.makeText(getApplicationContext(), "Экстренное оповещение!!!", Toast.LENGTH_SHORT).show();
+            Intent switcher = new Intent(MainActivity.this, BLEActivity.class);
+            MainActivity.this.startActivity(switcher);
+//            Toast.makeText(getApplicationContext(), "Экстренное оповещение!!!", Toast.LENGTH_SHORT).show();
         }
         else
         {
