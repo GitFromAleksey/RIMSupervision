@@ -3,7 +3,7 @@ package com.example.rimsupervision;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,10 +14,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class DailyAverageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btnBack;
-    Button btn2;
-    Button btn3;
-    Button btn4;
+    ImageButton buttonHome;
+    ImageButton buttonSpark;
+    ImageButton buttonTable;
+    ImageButton buttonGraph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,47 +30,38 @@ public class DailyAverageActivity extends AppCompatActivity implements View.OnCl
             return insets;
         });
 
-        btnBack = findViewById(R.id.buttonBack);
-        btnBack.setOnClickListener(this);
-        btn2 = findViewById(R.id.button2);
-        btn2.setOnClickListener(this);
-        btn3 = findViewById(R.id.button3);
-        btn3.setOnClickListener(this);
-        btn4 = findViewById(R.id.button4);
-        btn4.setOnClickListener(this);
+        buttonHome = findViewById(R.id.buttonHome);
+        buttonHome.setOnClickListener(this);
+        buttonSpark = findViewById(R.id.buttonSpark);
+        buttonSpark.setOnClickListener(this);
+        buttonTable = findViewById(R.id.buttonTable);
+        buttonTable.setOnClickListener(this);
+        buttonGraph = findViewById(R.id.buttonGraph);
+        buttonGraph.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v)
     {
-        if(btnBack == v)
+        if(buttonHome == v)
         {
-//            Toast.makeText(getApplicationContext(), "btnBack", Toast.LENGTH_SHORT).show();
-//            finish();
             Intent switcher = new Intent(DailyAverageActivity.this, MainActivity.class);
             DailyAverageActivity.this.startActivity(switcher);
         }
-        else if(btn2 == v)
+        else if(buttonSpark == v)
         {
-//            Toast.makeText(getApplicationContext(), "btn2", Toast.LENGTH_SHORT).show();
-            Intent switcher = new Intent(this, PeakLoadsActivity.class);
-            this.startActivity(switcher);
-        }
-        else if(btn3 == v)
-        {
-//            Toast.makeText(getApplicationContext(), "btn3", Toast.LENGTH_SHORT).show();
             Intent switcher = new Intent(this, PeakDateActivity.class);
             this.startActivity(switcher);
         }
-        else if(btn4 == v)
+        else if(buttonTable == v)
         {
-//            Toast.makeText(getApplicationContext(), "btn4", Toast.LENGTH_SHORT).show();
             Intent switcher = new Intent(this, PredictActivity.class);
             this.startActivity(switcher);
         }
-        else
+        else if(buttonGraph == v)
         {
-            Toast.makeText(getApplicationContext(), "unknown", Toast.LENGTH_SHORT).show();
+            Intent switcher = new Intent(this, PeakLoadsActivity.class);
+            this.startActivity(switcher);
         }
     }
 }

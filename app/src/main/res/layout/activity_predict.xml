@@ -10,21 +10,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="394dp"
-        android:layout_height="79dp"
+        android:layout_width="345dp"
+        android:layout_height="78dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="НАДЗОР"
-            android:textColor="@color/white"
-            android:textSize="48sp"
+            android:src="@drawable/supervision"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,72 +36,113 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rim"
-            tools:srcCompat="@drawable/rim" />
+            app:srcCompat="@drawable/rim" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="397dp"
-        android:layout_height="156dp"
+        android:layout_width="315dp"
+        android:layout_height="315dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="366dp"
+            android:layout_height="105dp">
+
+            <ImageButton
+                android:id="@+id/buttonHome"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_1" />
+
+            <ImageButton
+                android:id="@+id/buttonSpark"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_weight="1"
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_5" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/buttonBack"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/buttonGraph"
+                android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="В начало" />
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_4" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/buttonChart"
+                android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="Таблица" />
-
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_3" />
         </TableRow>
 
     </TableLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
-        android:layout_width="404dp"
-        android:layout_height="149dp"
+        android:layout_width="339dp"
+        android:layout_height="291dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine3"
+
+        <ImageView
+            android:id="@+id/imageView5"
             android:layout_width="match_parent"
-            android:layout_height="144dp"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="Прогноз нагрузки на ... дней"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/help_econimize" />
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/_75kw"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="401dp"
-        android:layout_height="339dp"
-        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:srcCompat="@drawable/predict_graph" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/_025"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.44"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/april"
+            app:layout_constraintBottom_toTopOf="@+id/imageView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.488"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,7 +3,6 @@ package com.example.rimsupervision;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -17,10 +16,10 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     ImageButton emerBtn;
-    Button btn1;
-    Button btn2;
-    Button btn3;
-    Button btn4;
+    ImageButton btnGraph;
+    ImageButton btnSpark;
+    ImageButton btnTable;
+    ImageButton btnChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,51 +34,44 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         emerBtn = (ImageButton) findViewById(R.id.imageButtonEmergency);
         emerBtn.setOnClickListener(this);
-        btn1 = (Button) findViewById(R.id.buttonBack);
-        btn1.setOnClickListener(this);
-        btn2 = (Button) findViewById(R.id.button2);
-        btn2.setOnClickListener(this);
-        btn3 = (Button) findViewById(R.id.button3);
-        btn3.setOnClickListener(this);
-        btn4 = (Button) findViewById(R.id.button4);
-        btn4.setOnClickListener(this);
+        btnGraph = (ImageButton) findViewById(R.id.buttonGraph);
+        btnGraph.setOnClickListener(this);
+        btnSpark = (ImageButton) findViewById(R.id.buttonSpark);
+        btnSpark.setOnClickListener(this);
+        btnTable = (ImageButton) findViewById(R.id.buttonTable);
+        btnTable.setOnClickListener(this);
+        btnChart = (ImageButton) findViewById(R.id.buttonChart);
+        btnChart.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(@NonNull View v)
     {
-        int btn1Id = btn1.getId();
-
-        if(btn1 == v)
+        if(btnGraph == v)
         {
-//            Toast.makeText(getApplicationContext(), "btn1 == v", Toast.LENGTH_SHORT).show();
-            Intent switcher = new Intent(MainActivity.this, DailyAverageActivity.class);
-            MainActivity.this.startActivity(switcher);
-        }
-        else if(btn2 == v)
-        {
-//            Toast.makeText(getApplicationContext(), "btn2 == v", Toast.LENGTH_SHORT).show();
             Intent switcher = new Intent(MainActivity.this, PeakLoadsActivity.class);
             MainActivity.this.startActivity(switcher);
         }
-        else if(btn3 == v)
+        else if(btnSpark == v)
         {
-//            Toast.makeText(getApplicationContext(), "btn3 == v", Toast.LENGTH_SHORT).show();
             Intent switcher = new Intent(MainActivity.this, PeakDateActivity.class);
             MainActivity.this.startActivity(switcher);
         }
-        else if(btn4 == v)
+        else if(btnTable == v)
         {
-//            Toast.makeText(getApplicationContext(), "btn4 == v", Toast.LENGTH_SHORT).show();
             Intent switcher = new Intent(MainActivity.this, PredictActivity.class);
+            MainActivity.this.startActivity(switcher);
+        }
+        else if(btnChart == v)
+        {
+            Intent switcher = new Intent(MainActivity.this, DailyAverageActivity.class);
             MainActivity.this.startActivity(switcher);
         }
         else if(emerBtn == v)
         {
             Intent switcher = new Intent(MainActivity.this, BLEActivity.class);
             MainActivity.this.startActivity(switcher);
-//            Toast.makeText(getApplicationContext(), "Экстренное оповещение!!!", Toast.LENGTH_SHORT).show();
         }
         else
         {

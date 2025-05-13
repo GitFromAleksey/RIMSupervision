@@ -10,21 +10,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="394dp"
-        android:layout_height="79dp"
+        android:layout_width="345dp"
+        android:layout_height="78dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BLE"
-            android:textColor="@color/white"
-            android:textSize="48sp"
+            android:src="@drawable/supervision"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,8 +36,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rim"
-            tools:srcCompat="@drawable/rim" />
+            app:srcCompat="@drawable/rim" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,6 +45,7 @@
         android:layout_height="405dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
@@ -66,7 +66,7 @@
             android:id="@+id/button_find"
             android:layout_width="296dp"
             android:layout_height="128dp"
-            android:text="НАЙТИ СЧЁТЧИК"
+            android:text="ПОДКЛЮЧИТЬ СЧЁТЧИК"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

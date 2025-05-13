@@ -11,21 +11,21 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="394dp"
-        android:layout_height="79dp"
+        android:layout_width="345dp"
+        android:layout_height="78dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="НАДЗОР"
-            android:textColor="@color/white"
-            android:textSize="48sp"
+            android:src="@drawable/supervision"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,90 +37,89 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rim"
-            tools:srcCompat="@drawable/rim" />
+            app:srcCompat="@drawable/rim" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
-        android:layout_width="391dp"
-        android:layout_height="172dp"
+        android:layout_width="352dp"
+        android:layout_height="82dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
-            android:layout_width="374dp"
-            android:layout_height="144dp"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:text="Помогаем экономить и делаем дом электробезопасным"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="34sp"
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/help_econimize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
         android:id="@+id/imageButtonEmergency"
-        android:layout_width="91dp"
-        android:layout_height="86dp"
+        android:layout_width="158dp"
+        android:layout_height="158dp"
         android:background="#3E3E3E"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:srcCompat="@android:drawable/ic_notification_overlay" />
+        app:srcCompat="@drawable/ellipse_1" />
 
     <TableLayout
-        android:layout_width="406dp"
-        android:layout_height="341dp"
+        android:layout_width="315dp"
+        android:layout_height="315dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButtonEmergency">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="366dp"
+            android:layout_height="105dp">
 
-            <Button
-                android:id="@+id/buttonBack"
+            <ImageButton
+                android:id="@+id/buttonGraph"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="1" />
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_4" />
 
-            <Button
-                android:id="@+id/button2"
+            <ImageButton
+                android:id="@+id/buttonSpark"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="2" />
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_5" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/button3"
+            <ImageButton
+                android:id="@+id/buttonTable"
                 android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="3" />
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_2" />
 
-            <Button
-                android:id="@+id/button4"
+            <ImageButton
+                android:id="@+id/buttonChart"
                 android:layout_width="wrap_content"
                 android:layout_height="160dp"
                 android:layout_weight="1"
-                android:text="4" />
+                android:background="#3E3E3E"
+                app:srcCompat="@drawable/icon_3" />
         </TableRow>
 
     </TableLayout>
